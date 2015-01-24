@@ -19,10 +19,11 @@ class JsLogWidget extends Widget{
     public function run()
     {
         $clientOptions = ArrayHelper::merge([
+            'appendData'=>[\Yii::$app->request->csrfParam => \Yii::$app->request->csrfToken],
             'handler'=>true,
             'url'=>Url::to($this->url)
         ], $this->clientOptions);
         JsLogAsset::register($this->view);
-        $this->view->registerJs('new YiiLogger('.Json::encode($clientOptions).')');
+        $this->view->registerJs('window.yiiLogger = new YiiLogger('.Json::encode($clientOptions).')');
     }
 }

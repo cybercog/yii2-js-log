@@ -1,5 +1,6 @@
 <?php
 namespace trntv\yii\jslog\action;
+use Yii;
 use yii\base\Action;
 use yii\helpers\ArrayHelper;
 use yii\log\Logger;
@@ -11,7 +12,6 @@ use yii\log\Logger;
 
 class JsLogAction extends Action{
 
-    public $logger = 'logger';
     public $baseCategory = 'js';
 
     public function run()
@@ -22,9 +22,7 @@ class JsLogAction extends Action{
             'info'=>Logger::LEVEL_INFO,
         ];
         $level = ArrayHelper::getValue($levels, \Yii::$app->request->post('level'), 'info');
-        /** @var \yii\log\Logger $logger */
-        $logger = \Yii::$app->get($this->logger);
-        $logger->log(
+        Yii::getLogger()->log(
             \Yii::$app->request->post('message'),
             $level,
             $this->baseCategory . '\\' .\Yii::$app->request->post('category', 'application')

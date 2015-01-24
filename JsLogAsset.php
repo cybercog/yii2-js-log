@@ -7,7 +7,7 @@ use yii\web\AssetBundle;
  */
 
 class JsLogAsset extends AssetBundle{
-    public $sourcePath = '@trntv\yii\jslog\assets';
+    public $sourcePath = '@vendor/trntv/yii2-js-log/assets';
     public $js = [
         'yii-js-log.js'
     ];
