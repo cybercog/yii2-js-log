@@ -1,3 +1,5 @@
+THIS IS EARLY PROTOTYPE. OF COURSE, YOU CAN USE IT, BUT... :-) BETTER CONTRIBUTE TO FINISH IT!
+
 Yii2 JavaScript Logger
 ======================
 Simple javascript logger for yii2 applications
