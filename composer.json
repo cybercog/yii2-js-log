@@ -1,0 +1,21 @@
+{
+    "name": "trntv/yii2-js-log",
+    "description": "Simple javascript logger for yii2 applications",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","javascript","logger"],
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Eugene Terentev",
+            "email": "eugene@terentev.net"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "trntv\\yii\\jslog\\": ""
+        }
+    }
+}
